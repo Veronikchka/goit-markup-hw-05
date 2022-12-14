@@ -123,6 +123,7 @@ body {
 .nav-header:hover,
 .nav-header:focus {
     color: var(--color-text-action);
+    text-decoration: 2px underline;
 
 }
     
