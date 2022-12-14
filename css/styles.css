@@ -352,7 +352,7 @@ fill: currentColor;
 /*occupation*/
     
 
-.img-activity {
+.img-activity{
 
     display: flex;
     justify-content: center;
@@ -363,6 +363,51 @@ fill: currentColor;
     padding-left: 0;
     
 }
+
+.occupation-item-container > img {
+    display: block;
+    margin: 0;
+}
+
+.occupation-item-container {
+
+   position: relative;
+
+}
+
+.service-label {
+
+    position: absolute;
+    top: 224px;
+    right: 0;
+    margin: 0;
+    width: 370px;
+    height: 70px;
+    padding: 27px 0;
+    margin: 0;
+
+    background-color: rgba(47, 48, 58, 0.8);
+   
+}
+
+.occupation-name {
+
+    display: block;
+    margin: 0;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+
+}
+
+
+
 
 /*team of studio*/
 .list-container-team {
