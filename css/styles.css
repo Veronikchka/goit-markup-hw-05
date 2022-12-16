@@ -73,6 +73,7 @@ body {
 }
 
 .navigation-header {
+
     min-width: 45px;
     margin-top: 0;
     margin-bottom: 0;
@@ -101,6 +102,9 @@ body {
 
 
 .nav-header {
+
+    position: relative;
+
     display: block;
     height: 16px;
     margin-left: 0px;
@@ -122,17 +126,20 @@ body {
    
 }
 
-.nav-header:hover::after {
-    content: '';
-    
-    display: block;
+.nav-header::after {
 
+    position: absolute;
+    
+    content: '';
+    top:46px;
+    right:0;
+    
     width:100%;
-    height: 32px;
+    height:2px;
     
-    border-bottom:4px solid #2196F3;
+    background: #2196F3;
     border-radius: 2px;
-    
+
 }
 
 .nav-header:hover,
