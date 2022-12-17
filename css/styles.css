@@ -337,6 +337,7 @@ fill: currentColor;
     width: 30px;
     height: 30px;
     
+    background-color: var(--color-bckgr-secondary);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 
