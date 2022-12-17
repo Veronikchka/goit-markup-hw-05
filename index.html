@@ -53,10 +53,12 @@
         Ефективні рішення для вашого бізнесу
     </h1>
     <div class="container-command-service-btn">
-      <button class="command-service-btn" type="button">Замовити послугу</button>
+      <button class="command-service-btn"  type="button" data-modal-open>Замовити послугу</button>
     </div>
   </div>
     </section>
+
+    
 <!--Characteristics-->
 
 <section class="section">
@@ -438,5 +440,20 @@
     
     
 </footer>
+
+<!--Modal-->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="close-icon-space" type="button" data-modal-close>
+      <svg class="close-icon" width="30" height="30">
+        <use href="../images/symbol-defs.svg#icon-close-black">
+        </use>
+      </svg>
+    </button>
+  </div>
+
+
+
+<script src="./js/modal.js"></script>
 </body>
 </html>

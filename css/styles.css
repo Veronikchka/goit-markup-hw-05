@@ -238,6 +238,9 @@ fill: currentColor;
     align-items: center;
 }
 .hero-container {
+
+    position: relative;
+
     margin-right: auto;
     margin-left: auto;
     max-width: 1600px;
@@ -257,7 +260,7 @@ fill: currentColor;
 
 
 .command-service-btn { 
-   display: inline-block;
+    display: inline-block;
     width: 200px;
     height: 50px;
     background: #2196F3;
@@ -274,6 +277,74 @@ fill: currentColor;
     
 
 }
+
+/*Modal window*/
+
+.backdrop {
+
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:1024px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transform:opacity (1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    transition: scale 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 50%;
+    left: 50%;
+
+    width:100%;
+    max-width: 528px;
+    height: 100%;
+    max-height:581px;
+    padding: 8px;
+    background-color: var(--color-bckgr-secondary);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    display:flex;
+    justify-content: end;
+  
+}
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0,7);
+    
+   
+}
+
+.backdrop.is-hidden {
+
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+.close-icon-space {
+    position: absolute;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
 
 /* quality descripion*/
 .section-occupation {
@@ -645,12 +716,51 @@ button:focus {
 }
 
 /* Portfolio block*/
+
+.portfolio-image {
+   
+ position: relative;
+ 
+     
+}
+
+
+.portfolio-overlay{
+    position: absolute;
+
+    background-color: rgba(33, 150, 243, 0.9);
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+
+    transform: translateY(0);
+    transition: transform 2s;
+
+}
+
+.portfolio-overlay:hover {
+
+    transform: translateY(100%);
+}
+
+.portfolio-overlay p {
+
+    padding: 63px 24px;
+    margin:0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
 .portfolio-card {
 
 transition-property: box-shadow;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-delay: 0;
+ 
     
 }
 
