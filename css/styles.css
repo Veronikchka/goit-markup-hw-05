@@ -126,7 +126,7 @@ body {
    
 }
 
-.nav-header::after {
+.studio::after {
 
     position: absolute;
     
@@ -135,8 +135,24 @@ body {
     right:0;
     
     width:100%;
-    height:2px;
+    height:4px;
     
+    background: #2196F3;
+    border-radius: 2px;
+
+}
+
+.portfolio::after {
+
+    position: absolute;
+
+    content: '';
+    top: 46px;
+    right: 0;
+
+    width: 100%;
+    height: 4px;
+
     background: #2196F3;
     border-radius: 2px;
 
@@ -286,7 +302,7 @@ fill: currentColor;
     top:0;
     left:0;
     width:100%;
-    height:1024px;
+    height:100%;
     background-color: rgba(0, 0, 0, 0.2);
 
     transform:opacity (1);
@@ -725,24 +741,31 @@ button:focus {
      
 }
 
-
 .portfolio-overlay{
     position: absolute;
-
+    
     background-color: rgba(33, 150, 243, 0.9);
     width:100%;
     height:100%;
-    left:0;
+    right:0;
     top:0;
-
-    transform: translateY(0);
-    transition: transform 2s;
+    
+    
+    transform: translateX(-100%);
+    transition: transform .3s cubic-bezier(.2, 0, .2, 1);
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.2, 0, 0.2, 1);
+    transition-delay: 0s;
+    transition-property: transform;
 
 }
 
-.portfolio-overlay:hover {
+.portfolio-card:hover .portfolio-overlay {
 
-    transform: translateY(100%);
+    transform: translateX(0);
+    opacity: 1;
+    
+     
 }
 
 .portfolio-overlay p {
@@ -751,9 +774,9 @@ button:focus {
     margin:0;
     font-weight: 400;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 1.6;
     letter-spacing: 0.03em;
-    color: #FFFFFF;
+    color: var(--color-bckgr-secondary);
 }
 .portfolio-card {
 
@@ -761,6 +784,7 @@ transition-property: box-shadow;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-delay: 0;
+overflow: hidden;
  
     
 }
